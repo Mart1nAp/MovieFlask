@@ -1,0 +1,21 @@
+@startum1
+
+Entity Movie {
+    code varchar(10) <<PK>>
+    name varchar(100) <<NN>>
+    image varchar(255)
+    year int(4)
+    rating float
+}
+
+Entity Review {
+    id int(8) <auto increment> <<PK>>
+    name varchar(100) <<NN>>
+    email varchar(100) <<NN>>
+    description varchar(400) <<NN>>
+    rating int(1) <<NN>>
+
+}
+Movie ||--o {Review
+
+@endum1
